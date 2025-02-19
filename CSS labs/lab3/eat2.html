@@ -6,57 +6,113 @@
     <title>Where Should We Eat</title>
     <link href="css/normalize.css" rel="stylesheet" />
     <link href="css/skeleton.css" rel="stylesheet" />
+    <link href="css/eat.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <div id="title"><h1>Where should we Eat?</h1></div>
-        <div id="info">
+    <main class="container">
+      <header id="title" class="centered">
+        <h1>Where should we Eat?</h1>
+      </header>
+      <div class="row">
+        <header id="info" class="eight columns offset-by-two centered">
           A website that helps you decide where you should eat when you ask your
           girlfriend "So what do you want to eat?" and she responds, "I don't
           care."
+        </header>
+      </div>
+
+      <section>
+        <div id="chip-5-days" class="row">
+          <h6 class="one-third offset-by-three column">
+            Has she had Chipotle in the last 5 days?
+          </h6>
+          <div class="one-third column">
+            <button>Yes</button>
+            <button>No</button>
+          </div>
         </div>
-      </header>
-      <main>
-        <section>
-          <h6>Has she had Chipotle in the last 5 days?</h6>
-          <button>Yes</button>
-          <button>No</button>
-        </section>
-        <section>
-          <h6>Are you trying to break up with her?</h6>
-          <button>Yes</button>
-          <button>No</button>
-        </section>
-        <section id="datequestion">
-          <h6>What day of the week is it?</h6>
-          <div><input type="radio" name="dateq" />Monday-Wednesday</div>
-          <div><input type="radio" name="dateq" />Thursday-Friday</div>
-          <div><input type="radio" name="dateq" />Saturday-Sunday</div>
-        </section>
-        <section id="olivegarden">
-          <h6>How does she feel about Olive Garden?</h6>
+      </section>
+
+      <section>
+        <div id="breakup" class="row">
+          <h6 class="one-third offset-by-three column">
+            Are you trying to break up with her?
+          </h6>
+          <div class="one-third column">
+            <button>Yes</button>
+            <button>No</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="datequestion" class="row">
+        <h6 class="one-third offset-by-three column">
+          What day of the week is it?
+        </h6>
+        <div class="one-third column">
+          <label><input type="radio" name="dateq" />Monday-Wednesday</label>
+          <label><input type="radio" name="dateq" />Thursday-Friday</label>
+          <label><input type="radio" name="dateq" />Saturday-Sunday</label>
+        </div>
+      </section>
+
+      <section id="olivegarden" class="row">
+        <h6 class="one-third offset-by-three column">
+          How does she feel about Olive Garden?
+        </h6>
+        <div class="one-third column">
           <button>Hates it</button>
           <button>It's ok</button>
-        </section>
-        <section id="bloomingonion">
-          <h6>Does she like blooming onions?</h6>
+        </div>
+      </section>
+
+      <section id="bloomingonion" class="row">
+        <h6 class="one-third offset-by-three column">
+          Does she like blooming onions?
+        </h6>
+        <div class="one-third column">
           <button>Yes</button>
           <button>No</button>
-        </section>
-        <section id="weekgoing">
-          <h6>How's her week going?</h6>
+        </div>
+      </section>
+
+      <section id="weekgoing" class="row">
+        <h6 class="one-third offset-by-three column">How's her week going?</h6>
+        <div class="one-third column">
           <button>Horribly</button>
           <button>Decently</button>
-        </section>
-        <div id="chipotle">Chipotle</div>
-        <div id="sonic">Sonic</div>
-        <div id="outback">Outback</div>
-        <div id="chilli">Chilli's</div>
-        <div id="kfc">KFC</div>
-        <div id="panera">Panera</div>
-        <div id="chocolate">Anywhere with chocolate or alcohol</div>
-      </main>
-    </div>
+        </div>
+      </section>
+
+      <div class="row">
+        <div id="chipotle" class="eight columns offset-by-two centered hidden">
+          <img src="images/chipotle.png" alt="Chipotle logo" />
+        </div>
+        <div id="sonic" class="eight columns offset-by-two centered hidden">
+          <img src="images/sonic.jpg" alt="Sonic logo" />
+        </div>
+        <div id="outback" class="eight columns offset-by-two centered hidden">
+          <img src="images/outback.png" alt="Outback logo" />
+        </div>
+        <div id="chili" class="eight columns offset-by-two centered hidden">
+          <img src="images/chilis.png" alt="Chili's logo" />
+        </div>
+        <div id="kfc" class="eight columns offset-by-two centered hidden">
+          <img src="images/kfc.png" alt="KFC logo" />
+        </div>
+        <div
+          id="olivegardenimg"
+          class="eight columns offset-by-two centered hidden"
+        >
+          <img src="images/olive-garden.png" alt="Olive Garden logo" />
+        </div>
+        <div id="panera" class="eight columns offset-by-two centered hidden">
+          <img src="images/panera.png" alt="Panera logo" />
+        </div>
+        <div id="chocolate" class="eight columns offset-by-two centered hidden">
+          <img src="images/chocolate.jpg" alt="chocolate logo" />
+        </div>
+      </div>
+    </main>
   </body>
 </html>

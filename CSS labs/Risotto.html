@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curved Text - Risotto</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f8f8f8;
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="500" height="300" viewBox="0 0 500 300">
+      <!-- Define a semi-circular path -->
+      <defs>
+        <path
+          id="curvePath"
+          d="M100,200 A150,150 0 0,1 400,200"
+          fill="none"
+          stroke="lightgray"
+        />
+      </defs>
+
+      <!-- Visible text following the path -->
+      <text font-size="40" fill="black">
+        <textPath href="#curvePath" startOffset="50%" text-anchor="middle">
+          Risotto
+        </textPath>
+      </text>
+    </svg>
+  </body>
+</html>

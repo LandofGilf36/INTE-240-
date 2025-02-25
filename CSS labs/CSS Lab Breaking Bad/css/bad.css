@@ -2,8 +2,6 @@
   font-family: "HeartBreakingBad";
   src: url("../font/Heart Breaking Bad.woff2") format("woff2"),
     url("../font/Heart Breaking Bad.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
 }
 
 .bad-font {

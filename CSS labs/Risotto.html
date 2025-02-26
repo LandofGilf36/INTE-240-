@@ -6,32 +6,106 @@
     <title>Curved Text - Risotto</title>
     <style>
       body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #f8f8f8;
+        border-style: solid;
+        border-width: 8px;
+        border-color: pink;
+      }
+      .gridcontainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        width: 90%;
+        margin: 0 auto;
+      }
+      .container {
+        font-size: 18px;
+        height: 97%;
+        width: calc 100%-8px;
+        border-style: solid;
+        border-color: red;
+        border-width: 5px;
+      }
+      .blank {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        height: 50px;
+      }
+      .centered {
+        font-size: larger;
+        font-weight: 600;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .single {
+        text-align: center;
+      }
+      .bold {
+        font-weight: 800;
+      }
+      .description {
+        text-align: center;
+        grid-column: 1 / -1;
       }
     </style>
   </head>
   <body>
-    <svg width="500" height="300" viewBox="0 0 500 300">
-      <!-- Define a semi-circular path -->
-      <defs>
-        <path
-          id="curvePath"
-          d="M100,200 A150,150 0 0,1 400,200"
-          fill="none"
-          stroke="lightgray"
-        />
-      </defs>
-
-      <!-- Visible text following the path -->
-      <text font-size="40" fill="black">
-        <textPath href="#curvePath" startOffset="50%" text-anchor="middle">
-          Risotto
-        </textPath>
-      </text>
-    </svg>
+    <div class="container">
+      <div class="gridcontainer">
+        <div class="blank"></div>
+        <div class="centered">
+          <svg width="500" height="300" viewBox="0 0 500 300">
+            <defs>
+              <path id="curvePath" d="M100,200 A150,150 0 0,1 400,200" />
+            </defs>
+            <text font-size="40" fill="black">
+              <textPath
+                href="#curvePath"
+                startOffset="50%"
+                text-anchor="middle"
+              >
+                RISOTTO
+              </textPath>
+            </text>
+          </svg>
+        </div>
+        <div class="centered">
+          Risotto is a dish from northern Italy made with rice and stock (a
+          liquid flavored with ingredients such as vegetables or chicken). The
+          most important ingredient is good quality risotto rice, ideally
+          carnaroli or vialone nano, both of which are available from good food
+          shops. When cooked, this rice has a firm texture as well as a creamy
+          softness. This may be hard to imagine, but when you have cooked a good
+          risotto, you'll see what I mean.
+        </div>
+        <div class="centered">
+          Once you know how to make a basic risotto, you can add other
+          ingredients, like vegetables or meat. In Milan, risotto is made with
+          saffron, which adds a beautiful golden color.
+        </div>
+        <div class="blank"></div>
+        <div class=".single bold">Serves</div>
+        <div class=".single bold">Preparation Time</div>
+        <div class=".single bold">Cooking Time</div>
+        <div class="single">4</div>
+        <div class="single">10 Minutese</div>
+        <div class="single">40 Minutes</div>
+        <div class="description">
+          <p>1½ ounces Parmesan cheese</p>
+          <p>5–6½ cups vegetable or chicken stock</p>
+          <p>
+            (if you are not using fresh stock,<br />
+            use a good vegetable bouillon powder)
+          </p>
+          <p>1 onion</p>
+          <p>3 tablespoons sweet butter</p>
+          <p>1 tablespoon olive oil</p>
+          <p>Scant 1½ cups risotto rice</p>
+          <p>½ teaspoon saffron threads</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

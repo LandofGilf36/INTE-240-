@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <title>Olive Garden</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              olivegardenbackground: "rgba(242,239,233,255)",
+              olivegartdenbrown: "#4e3629",
+              olivegardengreen: "#a8ad00",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="css/sauce.css" />
+  </head>
+  <body class="bg-olivegardenbackground normaltext">
+    <main class="container mx-auto grid gap-4 p-4 grid-cols-4">
+      <div class="col-span-4 text-center text-4xl text-olivegartdenbrown">
+        A sauce for every craving
+      </div>
+      <div class="col-span-4 text-center text-xl text-olivegartdenbrown">
+        Stuck on which <span class="font-bold">made-from-scratch sauce</span> to
+        try next? We can help.
+      </div>
+      <div
+        class="col-span-4 mx-auto bg-olivegartdenbrown text-white w-48 py-3 text-center"
+      >
+        Feeling cheesy?
+      </div>
+      <div class="col-span-4 flex justify-around gap-4">
+        <button class="text-olivegartdenbrown">Absolutely</button>
+        <button class="text-olivegartdenbrown">Not today</button>
+      </div>
+      <div class="col-span-4 grid grid-cols-2 gap-4">
+        <div class="bg-olivegartdenbrown text-white p-4 text-center">
+          Craving something creamy?
+        </div>
+        <div class="bg-olivegartdenbrown text-white p-4 text-center">
+          Have something hearty in mind?
+        </div>
+      </div>
+      <div class="col-span-4 grid grid-cols-4 gap-4">
+        <button>You bet</button>
+        <button>Not so much</button>
+        <button>Sure do</button>
+        <button>Not really</button>
+      </div>
+      <div class="col-span-4 grid grid-cols-4 gap-4 text-center">
+        <div class="bg-olivegartdenbrown text-white p-4">
+          Is everything better with bacon?
+        </div>
+        <div class="bg-olivegardengreen text-white p-4 rounded-3xl">
+          The five cheese marinara's for you
+        </div>
+        <div class="bg-olivegardengreen text-white p-4 rounded-3xl">
+          Must be the meat sauce
+        </div>
+        <div class="bg-olivegardengreen text-white p-4 rounded-3xl">
+          Make it <br />marinara
+        </div>
+      </div>
+      <div class="col-span-4 flex justify-around gap-4">
+        <button class="text-olivegartdenbrown">Always</button>
+        <button class="text-olivegartdenbrown">Not quite</button>
+      </div>
+      <div class="col-span-4 grid grid-cols-2 gap-4 text-center">
+        <div class="bg-olivegardengreen text-white p-4 rounded-3xl">
+          Carbonara and<br />call it a day
+        </div>
+        <div class="bg-olivegardengreen text-white p-4 rounded-3xl">
+          It was always<br />alfredo
+        </div>
+      </div>
+      <p class="col-span-4 text-center mt-12">
+        <span class="fas fa-utensils text-olivegartdenbrown"></span>
+        Created by Brent Gilfillan
+        <span class="fas fa-leaf text-olivegardengreen"></span>
+      </p>
+      <div class="col-span-4 text-center mt-4">
+        <img
+          src="images/screenshot-win-grid.jpg.png"
+          alt="Grid Garden Win Screenshot"
+        />
+      </div>
+    </main>
+  </body>
+</html>

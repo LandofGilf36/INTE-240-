@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nine Bodies in a Mexican Morgue</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="bg-gradient-to-b from-[#ffff7a] to-green-800 via-[#ee8544] m-5 p-5"
+  >
+    <header class="text-[72px] text-white mx-auto text-center">
+      10 Passports but 9 Bodies
+    </header>
+    <header class="text-[36px] text-white mx-auto text-center mb-5">
+      The 10 People on the Plane are:
+    </header>
+    <div class="grid grid-cols-2 md:grid-cols-5 mx-auto">
+      <div class="p-5 text-center mx-auto text-white relative">
+        <img
+          src="images/flight attendant.webp"
+          alt="flight Attendant"
+          class="w-[300px] h-[300px]"
+        /><span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        >
+      </div>
+      <div class="p-5 text-center mx-auto text-white relative">
+        <img
+          src="images/pilot.webp"
+          alt="Pilot-Captain Primero Gabriel vega"
+          class="w-[300px] h-[300px]"
+        /><span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        >
+      </div>
+      <div class="p-5 text-center mx-auto text-white relative">
+        <img
+          src="images/dr kevin.webp"
+          alt="Kevin-Doctor"
+          class="w-[300px] h-[300px]"
+        /><span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        >
+      </div>
+      <div class="p-5 text-center mx-auto text-white relative">
+        <img
+          src="images/zack.webp"
+          alt="Zack-Insurance Salesman"
+          class="w-[300px] h-[300px]"
+        /><span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        >
+      </div>
+      <div class="p-5 text-center mx-auto text-white relative">
+        <img
+          src="images/amy.webp"
+          alt="Amy-Child of Tech King on Honeymoon"
+          class="w-[300px] h-[300px]"
+        /><span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        >
+      </div>
+      <div class="p-5 text-center mx-auto text-white relative">
+        <img
+          src="images/carlos.webp"
+          alt="Carlos-Mexican Wrestler-Rapido"
+          class="w-[300px] h-[300px]"
+        /><span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        >
+      </div>
+      <div class="p-5 text-center mx-auto text-white relative">
+        <img
+          src="images/dan.webp"
+          alt="Dan-Limo Driver-Married to Amy"
+          class="w-[300px] h-[300px]"
+        /><span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        >
+      </div>
+      <div class="p-5 text-center mx-auto text-white relative">
+        <img
+          src="images/travis.webp"
+          alt="Travis-MAGA Husband"
+          class="w-[300px] h-[300px]"
+        /><span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        >
+      </div>
+      <div class="p-5 text-center mx-auto text-white relative">
+        <img
+          src="images/lisa.webp"
+          alt="Lisa-MAGA wife"
+          class="w-[300px] h-[300px]"
+        /><span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        >
+      </div>
+      <div class="p-5 text-center mx-auto text-white relative">
+        <img
+          src="images/photographer.webp"
+          alt="Sonja-Photographer"
+          class="w-[300px] h-[300px]"
+        /><span
+          class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden"
+          onclick="removeX(this)"
+          >X</span
+        >
+      </div>
+    </div>
+    <!-- Reset Button -->
+    <button
+      class="mt-5 px-6 py-2 bg-red-500 text-white text-xl font-semibold hover:bg-red-700 transition-all mx-auto block"
+      onclick="resetAllX()"
+    >
+      Reset
+    </button>
+
+    <script>
+      // Function to show the X on the image when clicked
+      document.querySelectorAll("img").forEach((img) => {
+        img.addEventListener("click", function () {
+          const closeX = this.nextElementSibling; // The <span> with the "X"
+          closeX.classList.remove("hidden"); // Show the X by removing 'hidden' class
+        });
+      });
+      // Function to remove a specific X when clicked
+      function removeX(span) {
+        span.classList.add("hidden"); // Hide the X by adding 'hidden' class
+      }
+      // Function to reset (remove) all X's
+      function resetAllX() {
+        document.querySelectorAll("span").forEach((span) => {
+          if (span.classList.contains("text-red-500")) {
+            // Ensure we're only resetting X spans
+            span.classList.add("hidden"); // Hide all the X's by adding 'hidden' class
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

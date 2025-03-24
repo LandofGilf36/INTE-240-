@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analog Clock</title>
+    <script src="js/clock2.js" defer></script>
+    <style>
+      .hour-input {
+        color: black;
+        margin-right: 5px;
+        width: 30px;
+      }
+      .minute-input {
+        color: black;
+        margin-left: 5px;
+        width: 30px;
+      }
+      .second-input {
+        color: red;
+        margin-left: 5px;
+        width: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="clockCanvas" width="200" height="200"></canvas>
+    <div>
+      <button id="currentTimeBtn">Draw current time</button>
+      <p>
+        Time:
+        <input
+          title="timeHour"
+          type="number"
+          class="hour-input"
+          min="1"
+          max="12"
+          value="12"
+          id="hourInput"
+        />:
+        <input
+          title="timeMinute"
+          type="number"
+          class="minute-input"
+          min="0"
+          max="59"
+          value="30"
+          id="minuteInput"
+        />
+        <input
+          title="timeSecond"
+          type="number"
+          class="second-input"
+          min="0"
+          max="59"
+          value="12"
+          id="secondInput"
+        />:
+      </p>
+    </div>
+  </body>
+</html>

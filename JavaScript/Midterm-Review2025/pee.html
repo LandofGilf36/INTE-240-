@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Midterm Exam Review 2025 INTE 240</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              peegreen: "#016B60",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="css/pee.css" />
+  </head>
+  <body>
+    <main>
+      <div
+        class="container grid grid-cols-10 bg-slate-100 mt-5 w-[90%] min-w-[400px] text-slate-800 p-2 text-[2rem] leading-[2.25rem] mx-auto"
+      >
+        <div class="col-span-10 text-center mb-4">
+          <h1 class="text-4xl font-extrabold text-peegreen">
+            Where Should You Pee?
+          </h1>
+        </div>
+        <!-- Root Question -->
+        <div id="q-start" class="col-span-10 bg-blue-200 p-4 mb-4 rounded">
+          <p class="font-bold">Where Are You?</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <button
+              class="bg-orange-300 text-black px-4 py-2 rounded"
+              data-next="car"
+            >
+              Car
+            </button>
+            <button
+              class="bg-orange-300 text-black px-4 py-2 rounded"
+              data-next="home"
+            >
+              Home
+            </button>
+            <button
+              class="bg-orange-300 text-black px-4 py-2 rounded"
+              data-next="outside"
+            >
+              Outside
+            </button>
+            <button
+              class="bg-orange-300 text-black px-4 py-2 rounded"
+              data-next="party"
+            >
+              Party
+            </button>
+            <button
+              class="bg-orange-300 text-black px-4 py-2 rounded"
+              data-next="somewhere-else"
+            >
+              Somewhere Else
+            </button>
+          </div>
+        </div>
+
+        <!-- Car Branch -->
+        <div id="car" class="col-span-10 bg-blue-200 p-4 mb-4 rounded hidden">
+          <p class="font-bold">Can You Hold It?</p>
+          <div class="flex gap-4 mt-2">
+            <button
+              class="bg-green-500 text-white px-4 py-2 rounded"
+              data-next="car-traffic"
+            >
+              No
+            </button>
+            <button
+              class="bg-red-500 text-white px-4 py-2 rounded"
+              data-next="toilet"
+            >
+              Yes
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="car-traffic"
+          class="col-span-10 bg-blue-200 p-4 mb-4 rounded hidden"
+        >
+          <p class="font-bold">Is There Traffic?</p>
+          <div class="flex gap-4 mt-2">
+            <button
+              class="bg-green-500 text-white px-4 py-2 rounded"
+              data-next="cup"
+            >
+              Yes
+            </button>
+            <button
+              class="bg-red-500 text-white px-4 py-2 rounded"
+              data-next="side-road"
+            >
+              No
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="side-road"
+          class="col-span-10 bg-yellow-200 p-4 mb-4 rounded hidden"
+        >
+          <p class="font-bold">Side Of The Road</p>
+        </div>
+
+        <!-- Home Branch -->
+        <div id="home" class="col-span-10 bg-blue-200 p-4 mb-4 rounded hidden">
+          <p class="font-bold">Are You In The Shower?</p>
+          <div class="flex gap-4 mt-2">
+            <button
+              class="bg-green-500 text-white px-4 py-2 rounded"
+              data-next="home-feet"
+            >
+              Yes
+            </button>
+            <button
+              class="bg-red-500 text-white px-4 py-2 rounded"
+              data-next="toilet"
+            >
+              No
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="home-feet"
+          class="col-span-10 bg-blue-200 p-4 mb-4 rounded hidden"
+        >
+          <p class="font-bold">Washed Your Feet Yet?</p>
+          <div class="flex gap-4 mt-2">
+            <button
+              class="bg-green-500 text-white px-4 py-2 rounded"
+              data-next="toilet"
+            >
+              Yes
+            </button>
+            <button
+              class="bg-red-500 text-white px-4 py-2 rounded"
+              data-next="shower"
+            >
+              No
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="shower"
+          class="col-span-10 bg-yellow-200 p-4 mb-4 rounded hidden"
+        >
+          <p class="font-bold">Shower</p>
+        </div>
+
+        <!-- Outside Branch -->
+        <div
+          id="outside"
+          class="col-span-10 bg-blue-200 p-4 mb-4 rounded hidden"
+        >
+          <p class="font-bold">Are People Around?</p>
+          <div class="flex gap-4 mt-2">
+            <button
+              class="bg-green-500 text-white px-4 py-2 rounded"
+              data-next="outside-public"
+            >
+              Yes
+            </button>
+            <button
+              class="bg-red-500 text-white px-4 py-2 rounded"
+              data-next="anywhere"
+            >
+              No
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="outside-public"
+          class="col-span-10 bg-blue-200 p-4 mb-4 rounded hidden"
+        >
+          <p class="font-bold">Do You Care What People Think?</p>
+          <div class="flex gap-4 mt-2">
+            <button
+              class="bg-green-500 text-white px-4 py-2 rounded"
+              data-next="bush"
+            >
+              Yes
+            </button>
+            <button
+              class="bg-red-500 text-white px-4 py-2 rounded"
+              data-next="anywhere"
+            >
+              No
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="anywhere"
+          class="col-span-10 bg-yellow-200 p-4 mb-4 rounded hidden"
+        >
+          <p class="font-bold">Anywhere You Want</p>
+        </div>
+
+        <div
+          id="bush"
+          class="col-span-10 bg-yellow-200 p-4 mb-4 rounded hidden"
+        >
+          <p class="font-bold">Behind A Bush</p>
+        </div>
+
+        <!-- Party Branch -->
+        <div id="party" class="col-span-10 bg-blue-200 p-4 mb-4 rounded hidden">
+          <p class="font-bold">Are You Drunk?</p>
+          <div class="flex gap-4 mt-2">
+            <button
+              class="bg-green-500 text-white px-4 py-2 rounded"
+              data-next="party-conscious"
+            >
+              Yes
+            </button>
+            <button
+              class="bg-red-500 text-white px-4 py-2 rounded"
+              data-next="toilet"
+            >
+              No
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="party-conscious"
+          class="col-span-10 bg-blue-200 p-4 mb-4 rounded hidden"
+        >
+          <p class="font-bold">Are You Conscious?</p>
+          <div class="flex gap-4 mt-2">
+            <button
+              class="bg-green-500 text-white px-4 py-2 rounded"
+              data-next="anywhere"
+            >
+              Yes
+            </button>
+            <button
+              class="bg-red-500 text-white px-4 py-2 rounded"
+              data-next="pants"
+            >
+              No
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="pants"
+          class="col-span-10 bg-yellow-200 p-4 mb-4 rounded hidden"
+        >
+          <p class="font-bold">Your Pants</p>
+        </div>
+
+        <!-- Somewhere Else Branch -->
+        <div
+          id="somewhere-else"
+          class="col-span-10 bg-blue-200 p-4 mb-4 rounded hidden"
+        >
+          <p class="font-bold">Did Someone Ask For A Urine Sample?</p>
+          <div class="flex gap-4 mt-2">
+            <button
+              class="bg-green-500 text-white px-4 py-2 rounded"
+              data-next="cup"
+            >
+              Yes
+            </button>
+            <button
+              class="bg-red-500 text-white px-4 py-2 rounded"
+              data-next="toilet"
+            >
+              No
+            </button>
+          </div>
+        </div>
+
+        <div id="cup" class="col-span-10 bg-yellow-200 p-4 mb-4 rounded hidden">
+          <p class="font-bold">In A Cup</p>
+        </div>
+
+        <!-- Final Universal Node -->
+        <div
+          id="toilet"
+          class="col-span-10 bg-yellow-200 p-4 mb-4 rounded hidden"
+        >
+          <p class="font-bold">Toilet</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/pee.js"></script>
+  </body>
+</html>
